@@ -31,8 +31,7 @@ class VolunteerRegistered extends Mailable
      */
     public function build()
     {
-        return $this->subject("Confirmation d'inscription bénévoles à Festi’Cheyres")
-                    ->view('emails.VolunteerRegisteredMail')
-                    ->attach('storage/Charte_Benevoles.pdf');
+        return $this->subject("Confirmation d'inscription bénévoles Course de garçons de café")
+                    ->view('emails.VolunteerRegisteredMail');
     }
 }
