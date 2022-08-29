@@ -1,6 +1,6 @@
 <template>
     <div class="container max-w-3xl mx-auto mt-2">
-        <img class="img-fluid" :src="bannerUrl" alt="Logo" >
+        <img class="mx-auto d-block mw-50" :src="bannerUrl" alt="Logo" >
         <h2 class="mb-3 mt-4">Bienvenue!</h2>
         <div>
             C'est reparti !! Make it Move revient avec un nouveau concept, une incroyable Course de Garçons de Café. Évidemment une course ne s'organise pas toute seule et nous recherchons des super bénévoles qui permettront à cet event de devenir réalité !<br><br>Inscris-toi via le formulaire ci-dessous ! Il n&#39;est évidemment pas interdit de prendre plusieurs tranches horaires et de rameuter tes amis pour les partager avec toi ! 😉<br>Si tu inscris plusieurs bénévoles, merci de bien utiliser une adresse email par personne pour s’assurer que tout le monde reçoive les infos importantes.<br><br>
