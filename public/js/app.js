@@ -22494,7 +22494,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.bannerUrl = window.location.origin + '/storage/Festicheyres2022_banner.jpg';
+    this.bannerUrl = window.location.origin + '/storage/MIM_LOGO_BLACK-1.png';
   }
 });
 
@@ -24623,11 +24623,11 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Merci pour ton inscription en tant que bénévole à Festi'Cheyres ! Toutes les informations ont été envoyées à l'adresse : ");
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Merci pour ton inscription en tant que bénévole à la Course de Garçons de Café ! Toutes les informations ont été envoyées à l'adresse : ");
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Si l'adresse est erronée, contacte-moi à "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "mailto:benevoles@festicheyres.ch"
-}, "benevoles@festicheyres.ch")], -1
+  href: "mailto:benevole@makeitmove.ch"
+}, "benevole@makeitmove.ch")], -1
 /* HOISTED */
 );
 
@@ -24637,7 +24637,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "img-fluid",
+    "class": "mx-auto d-block",
+    style: {
+      "max-height": "250px"
+    },
     src: $data.bannerUrl,
     alt: "Logo"
   }, null, 8
@@ -24676,7 +24679,7 @@ var _hoisted_1 = {
 };
 var _hoisted_2 = ["src"];
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h2 class=\"mb-3 mt-4\">Bienvenue!</h2><div> C&#39;est reparti !! Make it Move revient avec un nouveau concept, une incroyable Course de Garçons de Café. Évidemment une course ne s&#39;organise pas toute seule et nous recherchons des super bénévoles qui permettront à cet event de devenir réalité !<br><br>Inscris-toi via le formulaire ci-dessous ! Il n&#39;est évidemment pas interdit de prendre plusieurs tranches horaires et de rameuter tes amis pour les partager avec toi ! 😉<br>Si tu inscris plusieurs bénévoles, merci de bien utiliser une adresse email par personne pour s’assurer que tout le monde reçoive les infos importantes.<br><br> Si tu as des questions, n&#39;hésite pas à nous contacter à l&#39;adresse <a href=\"mailto:benevoles@makeitmove.ch\" target=\"_blank\">benevoles@makeitmove.ch</a>.<br><br>Comme chaque année, sans toi et ta généreuse contribution, nos events déjantés ne pourraient pas avoir lieu. Pour ça, nous tenons à te remercier d&#39;avance ! 🙏🏼<br><br>À tout bientôt en ville 🏃‍♂️☀️🍻<br><br>Laetitia Brodard<br>Responsable bénévoles </div><h2 class=\"mt-4\">Informations personnelles</h2>", 3);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h2 class=\"mb-3 mt-4\">Bienvenue!</h2><div> C&#39;est reparti !! Make it Move revient avec un nouveau concept, une incroyable Course de Garçons de Café. Évidemment une course ne s&#39;organise pas toute seule et nous recherchons des super bénévoles qui permettront à cet event de devenir réalité !<br><br>Inscris-toi via le formulaire ci-dessous ! Il n&#39;est évidemment pas interdit de prendre plusieurs tranches horaires et de rameuter tes amis pour les partager avec toi ! 😉<br>Si tu inscris plusieurs bénévoles, merci de bien utiliser une adresse email par personne pour s’assurer que tout le monde reçoive les infos importantes.<br><br> Si tu as des questions, n&#39;hésite pas à nous contacter à l&#39;adresse <a href=\"mailto:benevole@makeitmove.ch\" target=\"_blank\">benevoles@makeitmove.ch</a>.<br><br>Comme chaque année, sans toi et ta généreuse contribution, nos events déjantés ne pourraient pas avoir lieu. Pour ça, nous tenons à te remercier d&#39;avance ! 🙏🏼<br><br>À tout bientôt en ville 🏃‍♂️☀️🍻<br><br>Laetitia Brodard<br>Responsable bénévoles </div><h2 class=\"mt-4\">Informations personnelles</h2>", 3);
 
 var _hoisted_6 = {
   "class": "row mb-2"
@@ -24785,7 +24788,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_ValidationErrors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ValidationErrors");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "mx-auto d-block mw-50",
+    "class": "mx-auto d-block",
+    style: {
+      "max-height": "250px"
+    },
     src: $data.bannerUrl,
     alt: "Logo"
   }, null, 8
@@ -25093,7 +25099,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_ValidationErrors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ValidationErrors");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "img-fluid mb-4",
+    "class": "mx-auto d-block",
+    style: {
+      "max-height": "250px"
+    },
     src: $data.bannerUrl,
     alt: "Logo"
   }, null, 8
@@ -25712,7 +25721,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Datepicker = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Datepicker");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "img-fluid mb-4",
+    "class": "mx-auto d-block",
+    style: {
+      "max-height": "250px"
+    },
     src: $data.bannerUrl,
     alt: "Logo"
   }, null, 8

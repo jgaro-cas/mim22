@@ -1,10 +1,10 @@
 <template>
     <div class="container max-w-3xl mx-auto mt-2">
-        <img class="mx-auto d-block mw-50" :src="bannerUrl" alt="Logo" >
+        <img class="mx-auto d-block" style="max-height: 250px;" :src="bannerUrl" alt="Logo" >
         <h2 class="mb-3 mt-4">Bienvenue!</h2>
         <div>
             C'est reparti !! Make it Move revient avec un nouveau concept, une incroyable Course de Garçons de Café. Évidemment une course ne s'organise pas toute seule et nous recherchons des super bénévoles qui permettront à cet event de devenir réalité !<br><br>Inscris-toi via le formulaire ci-dessous ! Il n&#39;est évidemment pas interdit de prendre plusieurs tranches horaires et de rameuter tes amis pour les partager avec toi ! 😉<br>Si tu inscris plusieurs bénévoles, merci de bien utiliser une adresse email par personne pour s’assurer que tout le monde reçoive les infos importantes.<br><br>
-            Si tu as des questions, n&#39;hésite pas à nous contacter à l&#39;adresse <a href="mailto:benevoles@makeitmove.ch" target="_blank">benevoles@makeitmove.ch</a>.<br><br>Comme chaque année, sans toi et ta généreuse contribution, nos events déjantés ne pourraient pas avoir lieu. Pour ça, nous tenons à te remercier d&#39;avance ! 🙏🏼<br><br>À tout bientôt en ville 🏃‍♂️☀️🍻<br><br>Laetitia Brodard<br>Responsable bénévoles
+            Si tu as des questions, n&#39;hésite pas à nous contacter à l&#39;adresse <a href="mailto:benevole@makeitmove.ch" target="_blank">benevoles@makeitmove.ch</a>.<br><br>Comme chaque année, sans toi et ta généreuse contribution, nos events déjantés ne pourraient pas avoir lieu. Pour ça, nous tenons à te remercier d&#39;avance ! 🙏🏼<br><br>À tout bientôt en ville 🏃‍♂️☀️🍻<br><br>Laetitia Brodard<br>Responsable bénévoles
         </div>
 
         <h2 class="mt-4">Informations personnelles</h2>

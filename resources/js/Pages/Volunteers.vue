@@ -1,6 +1,6 @@
 <template>
     <div class="container max-w-3xl mx-auto mt-2">
-        <img class="img-fluid mb-4" :src="bannerUrl" alt="Logo" >
+        <img class="mx-auto d-block" style="max-height: 250px;" :src="bannerUrl" alt="Logo" >
         <div class="d-flex justify-content-end mb-2">
             <button type="button" class="btn btn-danger align-items-right" @click="logout">Lougout</button>
             <button type="button" class="btn btn-primary align-items-right ml-2">
