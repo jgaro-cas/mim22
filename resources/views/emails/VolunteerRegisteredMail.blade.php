@@ -17,7 +17,7 @@
     {{-- <p>{{ $mailDatas}}</p> --}}
     <br>
     <p>🕑 Nous te donnons rendez-vous <u>15 minutes avant le début de ton shift au départ de la course</u>, qui se trouve dans la Grand-Rue, devant le shop Knight Rider</p>
-
+    <p>Pour te remercier de ton précieux coup de main, tu recevras un bon pour manger 🍔, et un bon boisson 🍺 (les boissons sont offertes pendant que tu travailles) ! </p>
     <p>Encore un grand merci pour ton engagement et à tout bientôt !</p>
 
     <p>Laetitia Brodard<br>Responsable Bénévoles<br><a href="mailto:benevole@makeitmove.ch" target="_blank">benevole@makeitmove.ch</a></p>
