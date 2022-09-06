@@ -20,6 +20,6 @@
     <p>Pour te remercier de ton précieux coup de main, tu recevras un bon pour manger 🍔, et un bon boisson 🍺 (les boissons sont offertes pendant que tu travailles) ! </p>
     <p>Encore un grand merci pour ton engagement et à tout bientôt !</p>
 
-    <p>Sébastien Hofmann<br>Responsable Bénévoles<br><a href="mailto:benevole@makeitmove.ch" target="_blank">benevole@makeitmove.ch</a></p>
+    <p>Laetitia Brodard & Sébastien Hofmann<br>Responsables Bénévoles<br><a href="mailto:benevole@makeitmove.ch" target="_blank">benevole@makeitmove.ch</a></p>
 </body>
 </html>
