@@ -126,7 +126,6 @@ class VolunteerController extends Controller
 
     public function getExcel(){
         $volunteers = Volunteer::with('workblocks.workplaces')->get();
-
         $exportDatas = [];
 
         foreach ($volunteers as $volunteer) {
