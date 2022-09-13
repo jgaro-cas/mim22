@@ -142,9 +142,9 @@ class VolunteerController extends Controller
         foreach ($workplaces as $workplace) {
             /* Create worksheet */
             $clonedWorksheet = clone $spreadsheet->getSheetByName('Workplace');
-            $clonedWorksheet->setTitle(substr($workplace->name,0,30));
+            $clonedWorksheet->setTitle(substr($workplace->name,0,20));
             $spreadsheet->addSheet($clonedWorksheet);
-            $spreadsheet->getSheetByName($workplace->name)->setCellValue('A1', $workplace->name);
+            $spreadsheet->getSheetByName(substr($workplace->name,0,20))->setCellValue('A1', $workplace->name);
             $sheetContent = array();
             foreach ($workplace->workblocks as $block) {
                 foreach ($block->volunteers as $volunteer) {
@@ -161,7 +161,7 @@ class VolunteerController extends Controller
 
                 }
             }
-            $spreadsheet->getSheetByName($workplace->name)->fromArray(
+            $spreadsheet->getSheetByName(substr($workplace->name,0,20))->fromArray(
                 $sheetContent,  // The data to set
                 NULL,        // Array values with this value will not be set
                 'A4'         // Top left coordinate of the worksheet range where
