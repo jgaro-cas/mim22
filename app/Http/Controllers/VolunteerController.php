@@ -6,9 +6,15 @@ use App\Http\Requests\StoreVolunteerRequest;
 use App\Http\Requests\UpdateVolunteerRequest;
 use App\Mail\VolunteerRegistered;
 use App\Models\Volunteer;
+use App\Models\Workplace;
+use Carbon\Carbon;
+use Illuminate\Support\Carbon as SupportCarbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use Spatie\SimpleExcel\SimpleExcelWriter;
 
 
@@ -125,34 +131,64 @@ class VolunteerController extends Controller
     }
 
     public function getExcel(){
-        $volunteers = Volunteer::with('workblocks.workplaces')->get();
-        $exportDatas = [];
+        /* Import Excel template */
+        $inputFileName = storage_path('app/excel/Base.xlsx');
+        $spreadsheet = IOFactory::load($inputFileName);
 
-        foreach ($volunteers as $volunteer) {
-            foreach ($volunteer->workblocks as $workblock) {
-                $datas = [
-                    'Id' => $volunteer->id,
-                    'Prénom' => $volunteer->first_name,
-                    'Nom' => $volunteer->last_name,
-                    'Mail' => $volunteer->mail,
-                    'Téléphone' => $volunteer->phone,
-                    'Place' => $workblock->workplaces->name,
-                    'Start' => $workblock->readable_start,
-                    'Stop' => $workblock->readable_stop,
-                    'Créé le' => $volunteer->created_at,
-                ];
-                array_push($exportDatas, $datas);
+        /* Import all registrations */
+        $workplaces = Workplace::with('workblocks.volunteers')->get();
+
+
+        foreach ($workplaces as $workplace) {
+            /* Create worksheet */
+            $clonedWorksheet = clone $spreadsheet->getSheetByName('Workplace');
+            $clonedWorksheet->setTitle($workplace->name);
+            $spreadsheet->addSheet($clonedWorksheet);
+            $spreadsheet->getSheetByName($workplace->name)->setCellValue('A1', $workplace->name);
+            $sheetContent = array();
+            foreach ($workplace->workblocks as $block) {
+                foreach ($block->volunteers as $volunteer) {
+                    $lineContent = [
+                        $volunteer->last_name,
+                        $volunteer->first_name,
+                        "=" . '"' . $volunteer->phone . '"',
+                        $volunteer->mail,
+                        Carbon::create($block->block_start)->toDateString(),
+                        Carbon::create($block->block_start)->toTimeString(),
+                        Carbon::create($block->block_stop)->toTimeString(),
+                    ];
+                    array_push($sheetContent, $lineContent);
+
+                }
             }
-
+            $spreadsheet->getSheetByName($workplace->name)->fromArray(
+                $sheetContent,  // The data to set
+                NULL,        // Array values with this value will not be set
+                'A4'         // Top left coordinate of the worksheet range where
+            );
         }
-        // return $exportDatas;
 
-        $writer = SimpleExcelWriter::streamDownload('ExportBenevoles.csv');
+        /* Suppress Workplace template */
+        $sheetIndex = $spreadsheet->getIndex($spreadsheet->getSheetByName('Workplace'));
+        $spreadsheet->removeSheetByIndex($sheetIndex);
 
+        /* Add volunteers list */
+        $volunteers = DB::table('volunteers')->orderBy('last_name')->get();
+        $volunteerRowIndex = 2;
+        $spreadsheet->getSheetByName('Liste de bénévoles');
+        foreach ($volunteers as $volunteer) {
+            $spreadsheet->getSheetByName('Liste de bénévoles')->fromArray(
+                [$volunteer->last_name, $volunteer->first_name, "=" . '"' . $volunteer->phone . '"', $volunteer->mail],   // The data to set
+                NULL,                                                                                   // Array values with this value will not be set
+                "A{$volunteerRowIndex}"                                                                 // Top left coordinate of the worksheet range where
+            );
+            $volunteerRowIndex ++;
+        }
 
-        $writer->addRows($exportDatas);
+        /* Save file. Not goot to store that in public path but actually no better solution*/
+        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+        $writer->save(storage_path('app/public/Liste_Benevoles.xlsx'));
+        return (asset('storage/Liste_Benevoles.xlsx'));
 
-        $writer->toBrowser();
-        // return $volunteers->toArray();
     }
 }
