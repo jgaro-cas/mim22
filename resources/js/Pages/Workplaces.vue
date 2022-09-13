@@ -91,8 +91,8 @@ import { Inertia } from '@inertiajs/inertia'
 import BreezeButton from '@/Components/Button.vue';
 import WorkplaceDetail from "@/Components/VolunteerManagement/WorkplaceDetail.vue";
 import ValidationErrors from "@/Components/ValidationErrors.vue";
-import Datepicker from 'vue3-date-time-picker';
-import 'vue3-date-time-picker/dist/main.css'
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css';
 import axios from 'axios';
 import { computed } from '@vue/runtime-core';
 import { Link } from '@inertiajs/inertia-vue3'
