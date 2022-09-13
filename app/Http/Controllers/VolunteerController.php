@@ -144,7 +144,7 @@ class VolunteerController extends Controller
             $clonedWorksheet = clone $spreadsheet->getSheetByName('Workplace');
             $clonedWorksheet->setTitle($workplace->name);
             $spreadsheet->addSheet($clonedWorksheet);
-            $spreadsheet->getSheetByName($workplace->name)->setCellValue('A1', $workplace->name);
+            $spreadsheet->getSheetByName($workplace->name)->setCellValue('A1', substr($workplace->name,0,30));
             $sheetContent = array();
             foreach ($workplace->workblocks as $block) {
                 foreach ($block->volunteers as $volunteer) {
