@@ -1,1 +1,0 @@
-Compress-Archive ".\app", ".\bootstrap" , ".\config", ".\database", ".\lang", ".\public", ".\resources", ".\routes", ".\storage", ".\artisan", ".\composer.json", ".\composer.lock" -DestinationPath ".\Prod.zip" -CompressionLevel Fastest
